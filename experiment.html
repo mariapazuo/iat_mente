@@ -44,10 +44,10 @@
 
     var target1 = [
       "Filosofía",
-      "Humanidades",
+      "Educación Preescolar",
       "Arte",
       "Literatura",
-      "Música",
+      "Trabajo Social",
       "Historia",
     ];
     var target2 = [
@@ -134,7 +134,7 @@
                                                 <li><b>Cada palabra tiene una categoría correcta</b>, siendo la mayoría fáciles.</li>
                                                 <li><b>El test no dará ningún resultado si va demasiado lento</b>, por lo que trate de ir tan rápido como le sea posible.</li>
                                                 <li><b>Es de esperar cometa algunos errores</b> si va muy rápido, no hay ningún problema.</li>
-                                                <li>Para mejores resultados, <b>evite las distracciones y permanezca concentrado(a)</b>.</li>
+                                                <li>Para mejores resultados, <b>evite las distracciones e intente concentrarse lo más posible.</b>.</li>
                                                 <ul>
                                                     </p>
                                                     <br><br>
@@ -652,7 +652,7 @@
             });
         
           return `
-            <p>Has terminado el IAT! A continuación te mostramos tus resultados.</p>
+            <p>¡Ha terminado el IAT! A continuación te mostramos sus resultados.</p>
             <p>Cuando los pares eran 
             ${target2_label}/${category1_label} y ${target1_label}/${category2_label}, le tomó un promedio de <strong> 
             ${Math.floor(mean_correct_responses_target2_category1)} ms</strong> responder. (Estereotípico)</p>
@@ -688,7 +688,7 @@
       questions: [
         {
           prompt:
-            "Actitud con respecto a las Ciencias Básicas (Biología, Ciencias de la Salud, Física, Ingenierías, Química, etc)",
+            "Calificá tu actitud hacia las Ciencias Básicas (Biología, Ciencias de la Salud, Física, Ingenierías, Química, etc)",
           name: "actitud_ciencias_basicas",
           options: escala1,
           required: true,
@@ -702,14 +702,14 @@
         },
         {
           prompt:
-            "Cómo asociás las Ciencias Básicas (Biología, Ciencias de la Salud, Física, Ingenierías, Química, etc) como masculinas o femeninas",
+            "¿Cómo asociás las Ciencias Básicas (Biología, Ciencias de la Salud, Física, Ingenierías, Química, etc) como masculinas o femeninas?",
           name: "asocia_ciencias_basicas",
           options: escala2,
           required: true,
         },
         {
           prompt:
-            "Cómo asocias las Ciencias Sociales  (Arte, Comunicación, Derecho, Educación, Política Psicología, etc) como masculinas o femeninas",
+            "¿Cómo asocias las Ciencias Sociales  (Arte, Comunicación, Derecho, Educación, Política Psicología, etc) como masculinas o femeninas?",
           name: "asocia_ciencias_sociales",
           options: escala2,
           required: true,
@@ -718,13 +718,11 @@
     };
 
     var escala3 = [
-      "Altamente masculinas",
-      "Moderadamente masculinas",
-      "Ligeramente masculinas",
-      "Ni masculinas ni femeninas",
-      "Ligeramente femeninas",
-      "Moderadamente femeninas",
-      "Altamente femeninas",
+      "Extremadamente relevante"
+      "Muy relevante"
+      "Algo relevante"
+      "Poco relevante"
+      "Nada relevante",
     ];
 
     var explicits2 = {
@@ -795,14 +793,14 @@
       questions: [
         {
           prompt:
-            "Indique cuántos hombres líderes en algún campo de Ciencia, Tecnología Ingeniería o Matemáticas (STEM) puede nombrar:",
+            "Escriba los nombres de los hombres líderes en algún campo de Ciencia, Tecnología, Ingeniería o Matemáticas (STEM) que puede nombrar:",
           columns: 6,
           required: true,
           name: "hombres_stem",
         },
         {
           prompt:
-            "Indique cuántas mujeres lideresas en algún campo de Ciencia, Tecnología Ingeniería o Matemáticas (STEM) puede nombrar:",
+            "Indique los nombres de las mujeres lideresas en algún campo de Ciencia, Tecnología, Ingeniería o Matemáticas (STEM) que puede nombrar:",
           columns: 6,
           required: true,
           name: "mujeres_stem",
@@ -989,7 +987,7 @@
           name: "edad",
         },
         {
-          prompt: "Edición de Mente:",
+          prompt: "¿Cuál es la Edición de Mente en la que participaste?:",
           columns: 3,
           required: true,
           name: "mujeres_stem",
@@ -1031,7 +1029,7 @@
           required: true,
         },
         {
-          prompt: "¿En qué provincia resides?",
+          prompt: "¿En qué provincia vivís?",
           name: "provincia",
           options: provincias,
           required: true,
@@ -1044,7 +1042,7 @@
       button_label: "Continuar",
       questions: [
         {
-          prompt: "¿En cual cantón habitas?",
+          prompt: "¿En cual cantón habitás?",
           name: "canton",
           options: function(){
               var province_data = jsPsych.data.get().last(1).values()[0]['response']['provincia'];
