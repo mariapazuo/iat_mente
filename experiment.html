@@ -969,6 +969,13 @@
           required: true,
         },
         {
+          prompt: "¿Tenés alguna discapacidad?",
+          name: "discapacidad",
+          options: ["Si", "No"],
+          required: true,
+        },
+        //si sí, que nos indique qué tipo
+        {
           prompt:
             "¿Cuántos Test de Asociación Implícita (TAI) has hecho antes?",
           name: "tai_previos",
@@ -993,6 +1000,12 @@
           columns: 3,
           required: true,
           name: "mujeres_stem",
+        },
+        {
+          prompt: "¿Habías aplicado anteriormente al programa?",
+          name: "previousApplicant",
+          options: ["Si", "No"],
+          required: true,
         },
       ],
       randomize_question_order: false,
@@ -1040,6 +1053,29 @@
     };
 
     var demographics4 = {
+      type: "survey-text",
+      button_label: "Continuar",
+      questions: [
+        {
+          prompt: "¿En qué área te querés desarrollar profesionalmente?:",
+          columns: 3,
+          required: true,
+          name: "areaDeEstudio",
+        },
+        {
+          prompt: "¿Para vos qué es el empoderamiento?",
+          columns: 3,
+          required: true,
+          name: "definicionEmpoderamiento",
+        },
+        {
+          prompt: "¿Para vos qué es el empoderamiento?",
+          columns: 3,
+          required: true,
+          name: "definicionEmpoderamiento",
+        },
+    
+    var demographics5 = {
       type: "survey-multi-choice-select",
       button_label: "Continuar",
       questions: [
