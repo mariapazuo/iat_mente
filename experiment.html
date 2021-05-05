@@ -1023,8 +1023,33 @@
         "Puntarenas" : ['Puntarenas','Esparza','Buenos Aires','Montes de Oro','Osa','Quepos','Golfito','Coto Brus','Parrita','Corredores','Garabito'],
         "Cartago" : ['Cartago','Paraíso','La Unión','Jiménez','Turrialba','Alvarado','Oreamuno','El Guarco']
     };
+    
+    var demographics3 = {
+      type: "survey-text",
+      button_label: "Continuar",
+      questions: [
+        {
+          prompt: "¿En qué área te querés desarrollar profesionalmente?:",
+          columns: 3,
+          required: true,
+          name: "areaDeEstudio",
+        },
+        {
+          prompt: "¿Para vos qué es el empoderamiento?",
+          columns: 3,
+          required: true,
+          name: "definicionEmpoderamiento",
+        },
+        {
+          prompt: "¿Para vos qué es el empoderamiento?",
+          columns: 3,
+          required: true,
+          name: "definicionEmpoderamiento",
+        },
+      ]
+    }
 
-    var demographics3= {
+    var demographics4= {
       type: "survey-multi-choice-select",
       button_label: "Continuar",
       questions: [
@@ -1051,28 +1076,6 @@
       ],
     };
 
-    var demographics4 = {
-      type: "survey-text",
-      button_label: "Continuar",
-      questions: [
-        {
-          prompt: "¿En qué área te querés desarrollar profesionalmente?:",
-          columns: 3,
-          required: true,
-          name: "areaDeEstudio",
-        },
-        {
-          prompt: "¿Para vos qué es el empoderamiento?",
-          columns: 3,
-          required: true,
-          name: "definicionEmpoderamiento",
-        },
-        {
-          prompt: "¿Para vos qué es el empoderamiento?",
-          columns: 3,
-          required: true,
-          name: "definicionEmpoderamiento",
-        },
     
     var demographics5 = {
       type: "survey-multi-choice-select",
@@ -1107,32 +1110,33 @@
     };
 
     var timeline = [];
-    timeline.push(instruction_block_1);
-    timeline.push(instruction_block_2);
-    timeline.push(instructions_initial_target);
-    timeline.push(initial_target);
-    timeline.push(instructions_initial_category);
-    timeline.push(initial_category);
-    timeline.push(instructions_combined_practice);
-    timeline.push(combined_practice);
-    timeline.push(instructions_combined_critical);
-    timeline.push(combined_critical);
-    timeline.push(instructions_reversed_target);
-    timeline.push(reversed_target);
-    timeline.push(instructions_combined_practice2);
-    timeline.push(combined_practice2);
-    timeline.push(instructions_combined_critical2);
-    timeline.push(combined_critical2);
-    timeline.push(explicits1);
-    timeline.push(explicits2);
-    timeline.push(explicits3);
-    timeline.push(explicits4);
-    timeline.push(explicits5);
-    timeline.push(demographics1);
-    timeline.push(demographics2);
-    timeline.push(demographics3);  // paises y provincia
-    timeline.push(demographics4); // cantones (debe ir despues de demographics 3)
-    timeline.push(debrief_block);
+    // timeline.push(instruction_block_1);
+    // timeline.push(instruction_block_2);
+    // timeline.push(instructions_initial_target);
+    // timeline.push(initial_target);
+    // timeline.push(instructions_initial_category);
+    // timeline.push(initial_category);
+    // timeline.push(instructions_combined_practice);
+    // timeline.push(combined_practice);
+    // timeline.push(instructions_combined_critical);
+    // timeline.push(combined_critical);
+    // timeline.push(instructions_reversed_target);
+    // timeline.push(reversed_target);
+    // timeline.push(instructions_combined_practice2);
+    // timeline.push(combined_practice2);
+    // timeline.push(instructions_combined_critical2);
+    // timeline.push(combined_critical2);
+    // timeline.push(explicits1);
+    // timeline.push(explicits2);
+    // timeline.push(explicits3);
+    // timeline.push(explicits4);
+    // timeline.push(explicits5);
+    // timeline.push(demographics1);
+    // timeline.push(demographics2);
+    timeline.push(demographics3);  
+    // timeline.push(demographics4); // cantones (debe ir despues de demographics 3)
+    // timeline.push(demographics5); // paises y provincia
+    // timeline.push(debrief_block);
 
     jsPsych.init({
       timeline: timeline,
