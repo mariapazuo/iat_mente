@@ -50,8 +50,6 @@
                 Las respuestas son completamente anónimas y confidenciales. En ningún momento se le pedirá su nombre, 
                 cédula o información que permita saber su identidad. Sus respuestas serán anónimas 
                 y la persona a cargo del estudio no tendrá acceso a su identidad.  <br>
-                Para participar en el estudio se debe cumplir el requisito de ser una participante seleccionada 
-                para la edición 17 del programa MenTe en Acción de Ideas en Acción.<br>
                 Su participación consistirá en llenar una breve encuesta y realizar un ejercicio de asociaciones que 
                 le tomarán un máximo de 15 minutos. <br>
                 Para cualquier consulta pueden contactar a Efecto Boomerang a hola@efectoboomerang.com<br><br>
@@ -642,7 +640,7 @@
       repetitions: 1,
     };
 
-    function getCohenDimage(cohend){
+        function getCohenDimage(cohend){
       if (cohend < -0.65){
         return "bkg_cohen_d_1.png"
       }else if(cohend >= -0.65 && cohend < -0.35){
@@ -710,7 +708,7 @@
               d_score : d, 
             });
         
-          return `
+           return `
             <img src="Boomerang-coral.png" alt="Boomerang logo" width="250 px">  
             <p>¡Ha terminado el IAT! A continuación te mostramos tus resultados.</p>
             <p>Cuando los pares eran 
@@ -1186,16 +1184,16 @@
     timeline.push(combined_practice2);
     timeline.push(instructions_combined_critical2);
     timeline.push(combined_critical2);
-    timeline.push(explicits1);
-    timeline.push(explicits2);
-    timeline.push(explicits3);
-    timeline.push(explicits4);
-    timeline.push(explicits5);
-    timeline.push(demographics1);
-    timeline.push(demographics2);
-    timeline.push(demographics3);  
-    timeline.push(demographics4); // cantones (debe ir despues de demographics 3)
-    timeline.push(demographics5); // paises y provincia
+    // timeline.push(explicits1);
+    // timeline.push(explicits2);
+    // timeline.push(explicits3);
+    // timeline.push(explicits4);
+    // timeline.push(explicits5);
+    // timeline.push(demographics1);
+    // timeline.push(demographics2);
+    // timeline.push(demographics3);  
+    // timeline.push(demographics4); // cantones (debe ir despues de demographics 3)
+    // timeline.push(demographics5); // paises y provincia
     timeline.push(debrief_block);
 
     var mobile = {
