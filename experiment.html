@@ -43,9 +43,8 @@
                 <p align="center">
                   ¡Hola! Muchas gracias por ayudar con este estudio.
                 <p align="left">
-                Este estudio es realizado por Efecto Boomerang. <br><br>
-                Esta herramienta es una adaptación de un estudio clásico que ha sido realizado anteriormente 
-                por el Proyecto Implicit de la Universidad de Harvard, Yale, Washington y Virginia. <br>
+                Esta herramienta es realizado por Efecto Boomerangun y consiste en una adaptación de un estudio realizado anteriormente 
+                por Project Implicit de la Universidad de Harvard, Yale, Washington y Virginia.  <br><br>
                 El propósito de este estudio es conocer las actitudes de personas en Costa Rica hacia los roles de género. <br>
                 Las respuestas son completamente anónimas y confidenciales. En ningún momento se le pedirá su nombre, 
                 cédula o información que permita saber su identidad. Sus respuestas serán anónimas 
@@ -730,6 +729,26 @@
       },
     };
 
+   var instructionsExplicits = {
+      type: "html-keyboard-response",
+      stimulus: `
+            <div style=' margin: auto;max-width:1000px;'>   
+                <img src="Boomerang-coral.png" alt="Boomerang logo" width="250 px"> 
+                <p align="center">
+                  ¡Ya finalizó la primera parte del estudio!
+                <p align="left">
+                A continuación va a encontrar la segunda parte, que consta de una encuesta que contiene preguntas relacionadas con 
+                el tema Género-Ciencia y algunos datos demográficos. <br><br>
+                De nuevo, las respuestas de esta segunda parte también son completamente anónimas y confidenciales. En ningún momento 
+                se le pedirá su nombre, cédula o información que permita saber su identidad. Sus respuestas serán anónimas 
+                y la persona a cargo del estudio no tendrá acceso a su identidad.  <br>
+                <br><br>
+                <b>Presione cualquier tecla para continuar con la última parte del estudio.<b>
+                </p>
+            </div>`,
+      post_trial_gap: 500,
+    };
+    
     var escala1 = [
       "Muy positiva",
       "Positiva",
@@ -1186,6 +1205,7 @@
     timeline.push(combined_practice2);
     timeline.push(instructions_combined_critical2);
     timeline.push(combined_critical2);
+    timeline.push(instructionsExplicits)
     timeline.push(explicits1);
     timeline.push(explicits2);
     timeline.push(explicits3);
